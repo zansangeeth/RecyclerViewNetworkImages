@@ -6,4 +6,5 @@ package com.zasa.recyclerviewnetworkimages
  */
 data class Wallpaper(val name :String) {
 
+    val imageUrl = "https://picsum.photos/200/300?random=$name"
 }

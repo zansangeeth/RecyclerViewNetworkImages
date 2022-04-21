@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.single_item_view.view.*
 
 /**
@@ -16,6 +17,7 @@ class WallpaperAdapter(val context: Context, val wallpapers : List<Wallpaper>) :
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         fun bind(wallpaper: Wallpaper){
             itemView.tvWallpaperName.text = wallpaper.name
+            Glide.with(context).load(wallpaper.imageUrl).into(itemView.ivImageView)
         }
 
     }
